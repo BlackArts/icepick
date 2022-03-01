@@ -1,6 +1,6 @@
 import satisfies from 'semver/functions/satisfies'
-import { transform } from './transform'
-import { load, promises } from './load'
+import { transform } from './shimport/transform'
+import { load, promises } from './shimport/load'
 
 interface Bundle {
   exposes: string;
