@@ -1,0 +1,23 @@
+{
+  "name": "icepick",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": "bin/icepick.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.ts --outfile=index.js --format=iife --global-name=__icepick__ --bundle --minify --sourcemap=external && esbuild src/icepick.ts --outfile=bin/icepick.js"
+  },
+  "author": "Jaye Marshall <jaye@blackarts.tech>",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.14.11",
+    "esinstall": "^1.1.7",
+    "memfs": "^3.4.1",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/semver": "^7.3.9",
+    "semver": "^7.3.5"
+  }
+}
